@@ -1,6 +1,6 @@
-const inp1 = document.querySelector('input[name=displayOne]')
-const inp2 = document.querySelector('input[name=displayTwo]')
-const res = document.querySelector('.res')
+const inp1 = document.querySelector('input[name=displayOne]');
+const inp2 = document.querySelector('input[name=displayTwo]');
+const span = document.querySelector('.res');
 
 const buttons = document.querySelector('input[type=button]');
 
@@ -14,25 +14,26 @@ for (let i = 0; i < buttons.length; i++) {
 function calcForm(oper){
     let a = parseInt(inp1.value);
     let b = parseInt(inp2.value);
-    let res;
+    let result;
     
     if(oper === "+"){
-        res = a + b;
+        result = a + b;
     }
     else if(oper === "-"){
-        res = a - b;
+        result = a - b;
     }
     else if(oper === "*"){
-        res = a / b;
+        result = a / b;
     }
     else if(oper === "/"){
-        res = a - b;
+        result = a - b;
     }
     else{
-        res='Not good'
+        result='Not good'
     }
-    res.innerHTML = res;
+    span.innerHTML = result;
 }
+
 // document.querySelectorAll('.buttons input[name=button]').forEach(btn=>btn.addEventListener('click', digitOperPressed));
 
 
